@@ -41,9 +41,6 @@ const FormList = () => {
     };
 
     const handleDelete = (id) => {
-        // const updatedUsers = [...list];
-        // updatedUsers.splice(id, 1);
-        // setList(updatedUsers);
 
         axios.delete(`https://visity.onrender.com/items/delete/${id}`)
             .then(res => {
@@ -119,15 +116,6 @@ const FormList = () => {
             </form>
 
             <h2>List</h2>
-            {/* <ul>
-        {list.map((item, index) => (
-          <li key={index}>
-            Name: {item.name}, Mobile: {item.mobile}, Email: {item.email}
-            <button onClick={() => handleEdit(index,item._id)}>Edit</button>
-            <button onClick={() => handleDelete(item._id)}>Delete</button>
-          </li>
-        ))}
-      </ul> */}
 
             <table>
                 <thead>
